@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 
 // app routes
 import AppRoutes from './AppRoutes'
 
 // bootstrap import
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SiteHeader from './views/components/SiteHeader';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRoutes />
+      <SiteHeader/>
+      <AppRoutes/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

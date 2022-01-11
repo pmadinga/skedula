@@ -1,12 +1,12 @@
 import { Navbar, Container, Nav } from "react-bootstrap"
-
+import style from './siteheader.module.css'
 
 const SiteHeader = () =>{
     return(
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar expand="lg" className={style.top_nav}>
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
