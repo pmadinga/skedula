@@ -11,9 +11,11 @@ const SiteHeader = () =>{
                     <Navbar.Brand href="/" className={style.brand}>
                         <img src={Logo} alt="Tshimologong Logo" className={style.logo}/>
                     </Navbar.Brand>
+                    
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className={`ms-auto ${style.links}`}>
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#link">Link</Nav.Link>
                         </Nav>
