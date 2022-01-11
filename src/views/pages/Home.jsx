@@ -1,9 +1,14 @@
-
+import { Container } from "react-bootstrap";
+import style from './home.module.css'
 
 const Home = () => {
     return(
         <div>
-            <h1>Home</h1>
+            <Container>
+                <h1 className={style.app_heading}>2022 App Factory</h1>
+                <hr />
+            </Container>
+            
         </div>
     )
 }
