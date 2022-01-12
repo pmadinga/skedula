@@ -11,10 +11,10 @@ const Home = () => {
                     <Row>
                         <Col sm="4">
                             <div className={`${style.card} `}>
-                                <a href="#" className={style.card_link}>
+                                <a href="#" className={`${style.card_link} my-2`}>
                                     <h2 className={`${style.card_heading} `}>Week 2</h2>
                                     <p className={style.topic}>Introduction to HTML</p>
-                                    <p >a</p>
+                                    <p className={style.view}>View Schedule</p>
                                 </a>
                             </div>
                         </Col>
