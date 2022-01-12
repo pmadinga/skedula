@@ -1,8 +1,15 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import style from './weekschedule.module.css'
+import data from '../../mock/mockDB.json'
 
-const WeekSchedule = () => {
+const WeekSchedule = ({}) => {
+
+    // const { 
+    //     params: {id}
+    // } = match;
+
+    console.log(data);
     return (
         <div>
             <Container className='py-5'>
@@ -28,6 +35,8 @@ const WeekSchedule = () => {
                     <ul>
                         <li><a href="https://google.com" target='_blank' rel="noreferrer">https://google.com</a></li>
                         <li><a href="https://microsoft.com" target='_blank' rel="noreferrer">https://microsoft.com</a></li>
+                        <li><a href="https://github.com/" target='_blank' rel="noreferrer">https://github.com/</a></li>
+                        
                     </ul>
                 </div>
             </Container>
