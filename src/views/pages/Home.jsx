@@ -1,7 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import style from './home.module.css'
 
+// mock data import
+import data from '../../mock/mockDB.json'
+
 const Home = () => {
+    const MOCKDATA = data.sort((a, b) => b.id - a.id)
+    console.log(MOCKDATA);
     return(
         <div>
             <Container>
@@ -9,15 +14,17 @@ const Home = () => {
                 <hr />
                 <div className={`${style.cards} `}>
                     <Row>
-                        <Col sm="4">
-                            <div className={`${style.card} `}>
-                                <a href="#" className={`${style.card_link} my-2`}>
-                                    <h2 className={`${style.card_heading} `}>Week 2</h2>
-                                    <p className={style.topic}>Introduction to HTML</p>
-                                    <p className={style.view}>View Schedule</p>
-                                </a>
-                            </div>
-                        </Col>
+                        {MOCKDATA.map(data => ( 
+                            <Col sm="4" key={data.id}>
+                                <div className={`${style.card} `}>
+                                    <a href="#" className={`${style.card_link} my-2`}>
+                                        <h2 className={`${style.card_heading} `}>Week {data.id}</h2>
+                                        <p className={style.topic}>{data.topic}</p>
+                                        <p className={style.view}>View Schedule</p>
+                                    </a>
+                                </div>
+                            </Col>
+                        ))}
                         
                     </Row>
                 </div>
