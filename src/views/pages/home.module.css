@@ -17,5 +17,15 @@
     text-decoration: none;
 }
 .card_heading{
-    background-color: #0C2343;
+    background-color: #B88900;
+    font-weight: 600;
+    color: #D7E5E4;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.2rem 0.5rem;
+    border-bottom: #9CAAD4 solid 0.3rem;
+}
+.topic{
+    padding: 0 0.4rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }

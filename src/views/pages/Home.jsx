@@ -10,7 +10,7 @@ const Home = () => {
                 <div className={`${style.cards} `}>
                     <Row>
                         <Col sm="4">
-                            <div className={`${style.card} py-2`}>
+                            <div className={`${style.card} `}>
                                 <a href="#" className={style.card_link}>
                                     <h2 className={`${style.card_heading} `}>Week 2</h2>
                                     <p className={style.topic}>Introduction to HTML</p>
