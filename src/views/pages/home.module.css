@@ -23,7 +23,7 @@
 }
 .card_heading{
     background-color: #B88900;
-    font-weight: 600;
+    
     color: #fff;
     border-radius: 0.5rem 0.5rem 0 0;
     padding: 0.2rem 0.5rem;
@@ -31,7 +31,7 @@
 }
 .topic{
     padding: 0 0.4rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
