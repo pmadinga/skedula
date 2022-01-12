@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
 // page imports
-import Home from './views/pages/Home'
+import Schedules from './views/pages/Schedules'
+import WeekSchedule from './views/pages/WeekSchedule'
 
 
 
@@ -9,7 +10,8 @@ const AppRoutes = () => {
     return(
         <div>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route exact path="/" element={<Schedules/>}/>
+                <Route path="weekschedule/:id" element={<WeekSchedule/>}/>
             </Routes>
         </div>
     )
