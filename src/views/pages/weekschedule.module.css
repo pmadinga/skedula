@@ -1,0 +1,14 @@
+.topic{
+    font-weight: 600;
+    font-size: 3rem;
+}
+@media (min-width: 768px){
+    .topic{
+        font-weight: 600;
+        font-size: 4rem;
+    }
+}
+.week_no{
+    
+    color: #555555;
+}
