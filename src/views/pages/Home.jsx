@@ -15,7 +15,7 @@ const Home = () => {
                 <div className={`${style.cards} `}>
                     <Row>
                         {MOCKDATA.map(data => ( 
-                            <Col sm="4" key={data.id}>
+                            <Col sm="12" md='6' lg='4' key={data.id}>
                                 <div className={`${style.card} `}>
                                     <a href="#" className={`${style.card_link} my-2`}>
                                         <h2 className={`${style.card_heading} `}>Week {data.id}</h2>
