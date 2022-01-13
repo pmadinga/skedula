@@ -1,15 +1,27 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import style from './weekschedule.module.css'
-import data from '../../mock/mockDB.json'
+
+// *******
+import {ref, onValue } from 'firebase/database'
+// import data from '../../mock/mockDB.json'
+
+import {db} from '../../controller/firebase'
 
 const WeekSchedule = () => {
 
-    // const { 
-    //     params: {id}
-    // } = match;
+    // const [scheduleData, setScheduleData] = useState([])
 
-    console.log(data);
+    // useEffect(() => {
+    //     const getData = async () =>{
+    //         try {
+                
+    //         } catch (error) {
+                
+    //         }
+    //     }
+    // }, [])
+
     return (
         <div>
             <Container className='py-5'>
