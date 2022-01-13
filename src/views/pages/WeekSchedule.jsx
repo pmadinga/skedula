@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import style from './weekschedule.module.css'
 import data from '../../mock/mockDB.json'
 
-const WeekSchedule = ({}) => {
+const WeekSchedule = () => {
 
     // const { 
     //     params: {id}
