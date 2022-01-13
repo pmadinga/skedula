@@ -1,15 +1,34 @@
+import {useEffect, useState} from 'react'
 import { Container, Row, Col } from "react-bootstrap";
-import { useSearchParams } from "react-router-dom";
 import style from './schedule.module.css'
 
 // mock data import
 import data from '../../mock/mockDB.json'
 
+import db from '../../controller/firebase'
+import {getDocs, collection, } from 'firebase/firestore'
+
 const Schedule = () => {
-    const [searchParams] = useSearchParams();
-    console.log(searchParams)
     const MOCKDATA = data.sort((a, b) => b.id - a.id)
-    console.log(MOCKDATA);
+    const [scheduleData, setScheduleData] = useState([])
+
+
+    // console.log(MOCKDATA);
+    useEffect(() => {
+        const getSchedules = async () => {
+            try {
+                const qSnap = await getDocs(collection(db, "schedules"));
+                qSnap.forEach((schedule) => {
+                    // console.log(schedule.data())
+                    setScheduleData(schedule.data())
+                })
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getSchedules();        
+    }, [])
+    console.log(scheduleData);
     return(
         <div>
             <Container>
