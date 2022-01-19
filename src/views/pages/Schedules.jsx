@@ -5,7 +5,7 @@ import style from './schedule.module.css'
 // mock data import
 import data from '../../mock/mockDB.json'
 
-import db from '../../controller/firebase'
+import db from '../../controller/config'
 import {getDocs, collection, } from 'firebase/firestore'
 
 const Schedule = () => {
