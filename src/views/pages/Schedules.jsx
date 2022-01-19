@@ -28,13 +28,16 @@ const Schedule = () => {
         }
         getSchedules();        
     }, [])
-    console.log(scheduleData);
+    console.log(JSON.parse(scheduleData));
     return(
         <div>
             <Container>
                 <h1 className={style.app_heading}>2022 App Factory</h1>
                 <hr />
                 <div className={`${style.cards} `}>
+                    {/* {scheduleData.map(data =>(
+                        <h1>{data.topic}</h1>
+                    ))} */}
                     <Row>
                         {MOCKDATA.map(data => ( 
                             <Col sm="12" md='6' lg='4' key={data.id}>
