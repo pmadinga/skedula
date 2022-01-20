@@ -11,16 +11,16 @@ import {getDocs, collection, } from 'firebase/firestore'
 const Schedule = () => {
     const MOCKDATA = data.sort((a, b) => b.id - a.id)
     const [scheduleData, setScheduleData] = useState([])
-
+    
 
     // console.log(MOCKDATA);
     useEffect(() => {
         const getSchedules = async () => {
             try {
                 const qSnap = await getDocs(collection(db, "schedules"));
-                qSnap.forEach((schedule) => {
+                qSnap.docs.forEach((schedule) => {
                     // console.log(schedule.data())
-                    setScheduleData(schedule.data())
+                    setScheduleData([schedule.data()])
                 })
             } catch (error) {
                 console.log(error);
@@ -28,7 +28,7 @@ const Schedule = () => {
         }
         getSchedules();        
     }, [])
-    console.log(JSON.parse(scheduleData));
+    console.log(scheduleData);
     return(
         <div>
             <Container>
@@ -39,17 +39,17 @@ const Schedule = () => {
                         <h1>{data.topic}</h1>
                     ))} */}
                     <Row>
-                        {MOCKDATA.map(data => ( 
-                            <Col sm="12" md='6' lg='4' key={data.id}>
+                        {scheduleData.map(data => { 
+                            <Col sm="12" md='6' lg='4' key={data.weekNo}>
                                 <div className={`${style.card} `}>
                                     <a href={`/weekschedule/${data.id}`} className={`${style.card_link} my-2`}>
-                                        <h2 className={`${style.card_heading} `}>Week {data.id}</h2>
+                                        <h2 className={`${style.card_heading} `}>Week {data.WeekNo}</h2>
                                         <p className={style.topic}>{data.topic}</p>
                                         <p className={style.view}>View Schedule</p>
                                     </a>
                                 </div>
                             </Col>
-                        ))}
+                        })}
                         
                     </Row>
                 </div>
